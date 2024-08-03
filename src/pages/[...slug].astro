@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.tsx';
-import CardGrid from '../components/CardGrid.jsx';
+import MangaDetail from '../components/MangaDetail';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<Nav client:visible />
-		<CardGrid client:visible />
+		<MangaDetail client:visible />
 	</main>
 </Layout>
