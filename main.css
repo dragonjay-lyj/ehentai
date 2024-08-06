@@ -1,0 +1,122 @@
+#gamewrapper {
+    display:none;
+}
+
+#message {
+    font-size:36pt;
+    margin-top:5%;
+    text-align:center;
+}
+#speed {
+    margin:50px auto 0 auto;
+    text-align:center;
+    display:none;
+}
+#progress {
+    margin:50px auto 0 auto;
+    width:75%;
+    max-width:700px;
+    height:25px;
+    background-color:#222;
+}
+#progress .jerkbar, #progress .cumbar {
+    height:100%;
+    float:left;
+    width:100%;
+    position:relative;
+}
+#progress .jerkbar .text, #progress .cumbar .text {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    text-align:center;
+    color:#000;
+    vertical-align:middle;
+    line-height:25px;
+    color:#fff;
+    display:none
+}
+#progress .cumbar {
+    background-color:green;
+    width:25%;
+    font-size:12pt;
+    display:none;
+    background: linear-gradient(to right, rgba(0, 120, 0, 1) 0%, rgba(100, 255, 100, 1) 100%);
+}
+#progress .cumbar .separator {
+    height:100%;
+    background:#000;
+    width:2px;
+    float:left
+}
+#progress .bar {
+    height:100%;
+    float:left;
+    background-color:#fff;
+    width:0px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#mainwrapper.stop #progress {
+    background-color:red;
+}
+#mainwrapper.stop #progress .bar {
+    background-color:#000;
+}
+#mainwrapper.go #progress {
+    background-color:rgb(0, 120, 0);
+}
+#mainwrapper.go #progress .jerkbar {
+    width:75%;
+}
+#mainwrapper.go #progress .bar {
+    background-color:#000;
+}
+#mainwrapper.go #progress .cumbar {
+    display:block;
+}
+#mainwrapper.go #progress .cumbar .bar {
+    background-color:red;
+}
+#mainwrapper.go #progress .text {
+    display:block;
+}
+#mainwrapper.go {
+    background-color:#001100;
+}
+#mainwrapper.stop {
+    background-color:#330000;
+}
+#mainwrapper.cancel {
+    background-color:#ff0000;
+}
+#mainwrapper.finish {
+    background-color:#009900;
+}
+#mainwrapper.go #speed, #mainwrapper.stop #speed {
+    display:block;
+}
+#mainwrapper.stop #flash, #mainwrapper.cancel #flash, #mainwrapper.finish #flash {
+    display:none;
+}
+#flash {
+    width:100px;
+    height:100px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    text-align:center;
+}
+#flash.on {
+    background:rgba(0, 255, 0, 0.75);
+}
+#flash.off {
+    background:rgba(0, 0, 0, 0.75);
+}
+#flash span {
+    text-transform:uppercase;
+    line-height:100px;
+    vertical-align:middle
+}
